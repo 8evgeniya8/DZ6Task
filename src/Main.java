@@ -1,12 +1,11 @@
-import task1.PalindromeChecker;
 import task2.DuplicateChecker;
-
-import java.util.Arrays;
+import task3.Solution;
 
 import static task1.PalindromeChecker.isPalindrome;
 
 public class Main {
     public static void main(String[] args) {
+
 //        task1
         String inputString = "A man, a plan, a canal: Panama";
         if (isPalindrome(inputString)) {
@@ -28,6 +27,20 @@ public class Main {
             System.out.println("true");
         } else {
             System.out.println("false");
+        }
+//        task3
+        Solution solution = new Solution();
+
+        int[] ints = {2, 7, 11, 15};
+        int target = 9;
+
+        int[] result = solution.twoSum(ints, target);
+
+        if (result != null) {
+            System.out.println("two numbers that sum to the target: " +
+                    "[" + result[0] + ", " + result[1] + "]");
+        } else {
+            System.out.println("no found");
         }
     }
 }
